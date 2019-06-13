@@ -26,6 +26,9 @@ RUN ln -s /root/git.git/.gitignore /root/.gitignore
 RUN git clone https://github.com/chrisgibson01/vim.git /root/vim.git
 RUN ln -s /root/vim.git/.vimrc /root/.vimrc
 
+RUN git clone https://github.com/chrisgibson01/clang-format.git /root/clang-format.git
+RUN ln -s /root/clang-format.git/.clang-format /root/.clang-format
+
 RUN git clone https://github.com/chrisgibson01/tmux.git /root/tmux.git
 RUN ln -s /root/tmux.git/.tmux.conf /root/.tmux.conf
 
