@@ -17,7 +17,10 @@ RUN apt update && apt install --yes \
     gdb \
     valgrind \
     lldb \
-    iproute2 
+    iproute2 \
+    linux-tools-generic
+
+RUN apt upgrade --yes
 
 RUN git clone https://github.com/chrisgibson01/git.git /root/git.git
 RUN ln -s /root/git.git/.gitconfig /root/.gitconfig
@@ -54,4 +57,6 @@ RUN mkdir /root/benchmark/build && cd /root/benchmark/build
 #RUN mkdir build && cd build
 #RUN cmake ../benchmark
 #RUN make
+
+
 
