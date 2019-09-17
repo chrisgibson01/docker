@@ -1,1 +1,1 @@
-sudo docker run -it --rm ubuntu_dev /bin/bash
+sudo docker run --privileged -it --rm ubuntu_dev /bin/bash
