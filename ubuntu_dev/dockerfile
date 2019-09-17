@@ -19,6 +19,7 @@ RUN apt update && apt install --yes \
     lldb \
     iproute2 \
     linux-tools-generic \
+    linux-tools-4.18.0.25-generic \
     python-pip
 
 RUN apt upgrade --yes
