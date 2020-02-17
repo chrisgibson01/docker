@@ -1,5 +1,7 @@
 FROM ubuntu_dev
 
+EXPOSE 8332 18332
+
 RUN apt-get update && apt-get install -y \
     libboost-all-dev \
     libdb-dev \

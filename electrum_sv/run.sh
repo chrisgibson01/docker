@@ -1,1 +1,1 @@
-sudo docker run -it --rm ubuntu_electrum_sv /bin/bash
+sudo docker run -it ubuntu_electrum_sv /bin/bash
