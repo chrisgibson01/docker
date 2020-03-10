@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 docker run --volumes-from vc_sv \
            --privileged \

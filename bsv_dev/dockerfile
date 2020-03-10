@@ -1,6 +1,6 @@
 FROM ubuntu_dev
 
-EXPOSE 8332 18332
+EXPOSE 8332 18332 18444
 
 RUN apt-get update && apt-get install -y \
     libboost-all-dev \
@@ -15,5 +15,15 @@ RUN apt-get update && apt-get install -y \
     libevent-dev \
     libminiupnpc-dev \
     libzmq3-dev \
-    bsdmainutils 
+    bsdmainutils \
+    curl \
+    unzip \
+    libcrypto++6 
+
+
+RUN curl https://rea.crea.si/download/nchain/gateway/TxBlaster6_2.zip -O
+
+RUN unzip /TxBlaster6_2.zip
+
+RUN chmod +x /TxBlaster6/bin/ubuntu18/TxBlaster
 

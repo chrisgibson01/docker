@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker run --rm -it txblaster /bin/bash
+docker run -it txblaster /bin/bash
 
