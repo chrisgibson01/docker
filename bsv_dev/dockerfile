@@ -28,8 +28,8 @@ EXPOSE 8332 18332 18444
 
 RUN mkdir /root/.bitcoin
 RUN echo "excessiveblocksize=0" >> /root/.bitcoin/bitcoin.conf
-RUN echo "maxstackmemoryusage=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "maxstackmemoryusageconsensus=0" >> /root/.bitcoin/bitcoin.conf
 
-RUN echo "regtest=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "regtest=1" >> /root/.bitcoin/bitcoin.conf
 
 
