@@ -1,0 +1,43 @@
+FROM centos:7
+
+RUN yum update -y
+
+RUN yum install -y centos-release-scl 
+RUN yum install -y scl-utils 
+RUN yum install -y devtoolset-8 
+RUN yum groupinstall -y 'Development Tools'
+RUN yum install -y libdb-devel
+RUN yum install -y libdb-cxx-devel
+RUN yum install -y libdb-cxx
+RUN yum install -y wget
+
+SHELL ["scl", "enable", "devtoolset-8" ]
+
+RUN wget -nv -O boost_1_70_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.70.0/boost_1_70_0.tar.gz/download
+
+RUN tar -xzvf boost_1_70_0.tar.gz
+WORKDIR /boost_1_70_0
+RUN ./bootstrap.sh
+RUN ./b2 -d1 install --with=all link=shared,static 
+
+
+#    libboost-all-dev \
+#    libdb-dev \
+#    libdb++-dev \
+#    build-essential \
+#    libtool \
+#    autotools-dev \
+#    automake \
+#    pkg-config \
+#    libssl-dev \
+#    libevent-dev \
+#    libminiupnpc-dev \
+#    libzmq3-dev \
+#    bsdmainutils \
+#    curl \
+#    unzip 
+#
+#RUN yum -y group install "development tools"
+#
+#EXPOSE 8332 18332 18444
+
