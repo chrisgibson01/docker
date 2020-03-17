@@ -10,15 +10,39 @@ RUN yum install -y libdb-devel
 RUN yum install -y libdb-cxx-devel
 RUN yum install -y libdb-cxx
 RUN yum install -y wget
+RUN yum install     -y  \
+       which            \
+       autoconf         \
+       libdb-devel      \
+       libdb-cxx-devel  \
+       libdb-cxx        \
+       make             \
+       libtool          \
+       automake         \
+       pkgconfig        \
+       openssl-devel    \
+       libevent-devel   \
+       gupnp            \
+       git              \
+       perl             \
+       gzip             \
+       zlib-devel       \
+       perl-App-cpanminus \
+       rh-python36      \
+       wget             \
+       bzip2-devel      \
+       python36u python36u-libs python36u-devel python36u-pip python-devel
+
+RUN yum install -y epel-release
 
 SHELL ["scl", "enable", "devtoolset-8" ]
 
 RUN wget -nv -O boost_1_70_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.70.0/boost_1_70_0.tar.gz/download
-
 RUN tar -xzvf boost_1_70_0.tar.gz
 WORKDIR /boost_1_70_0
-RUN ./bootstrap.sh
-RUN ./b2 -d1 install --with=all link=shared,static 
+RUN     export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.6u"
+#RUN ./bootstrap.sh
+#RUN ./b2 -d1 install --with=all link=shared,static 
 
 
 #    libboost-all-dev \
