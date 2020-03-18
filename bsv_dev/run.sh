@@ -1,9 +1,12 @@
 #!/bin/bash
 
 docker run --volumes-from vc_sv \
-           --privileged \
-	   --net host \
-           -it bsv_dev /bin/bash
+           -it bsv_dev_ubuntu:18.04 /bin/bash
+
+#docker run --volumes-from vc_sv \
+#           --privileged \
+#    	   --net host \
+#           -it x:18.04 /bin/bash
 
 #docker run --volumes-from vc_sv \
 #           --privileged \

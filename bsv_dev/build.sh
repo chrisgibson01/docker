@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t bsv_dev .
+docker build -t x:18.04 .
