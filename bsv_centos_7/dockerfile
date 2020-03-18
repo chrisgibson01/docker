@@ -1,0 +1,20 @@
+FROM centos:7
+MAINTAINER Chris Gibson
+
+RUN yum -y update 
+RUN yum -y install wget  
+RUN yum -y install curl  
+
+RUN wget -O bsv-0.2.1.tar.gz https://download.bitcoinsv.io/bitcoinsv/0.2.1/bitcoin-sv-0.2.1-x86_64-linux-gnu.tar.gz
+
+RUN tar -xzvf bsv-0.2.1.tar.gz
+
+RUN wget -O bsv-0.2.2.tar.gz https://download.bitcoinsv.io/bitcoinsv/0.2.2.beta/bitcoin-sv-0.2.2.beta-x86_64-linux-gnu.tar.gz
+
+RUN tar -xzvf bsv-0.2.2.tar.gz
+
+
+
+
+
+
