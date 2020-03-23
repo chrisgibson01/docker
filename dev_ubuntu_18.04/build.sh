@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t ubuntu_dev:18.04 .
+docker build -t dev_ubuntu:18.04 .
