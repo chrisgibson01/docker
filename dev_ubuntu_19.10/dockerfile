@@ -19,8 +19,9 @@ RUN apt update && apt install --yes \
     lldb \
     iproute2 \
     python-pip \
-    htop \ 
-    linux-tools-common 
+    linux-tools-common \
+    bpftrace \
+    htop 
     #linux-tools-`uname -r`  needed for perf can't be found!
 
 RUN apt upgrade --yes

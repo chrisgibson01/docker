@@ -1,1 +1,1 @@
-sudo docker run --privileged -it --rm ubuntu_dev:18.04 /bin/bash
+sudo docker run --privileged -it --rm dev_ubuntu:19.10 /bin/bash

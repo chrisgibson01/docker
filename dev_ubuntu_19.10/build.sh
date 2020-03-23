@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t ubuntu_dev:19.04 .
+docker build -t dev_ubuntu:19.10 .
