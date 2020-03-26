@@ -1,0 +1,24 @@
+FROM dev_ubuntu:18.04
+MAINTAINER Chris Gibson
+
+RUN apt update
+
+RUN apt install -y curl
+
+RUN wget https://openssl.org/source/old/1.1.1/openssl-1.1.1d.tar.gz 
+#RUN curl https://openssl.org/source/old/1.1.1/openssl-1.1.1d.tar.gz -O
+
+
+RUN tar -xf openssl-1.1.1d.tar.gz
+
+WORKDIR openssl-1.1.1d
+
+RUN ./config
+
+RUN make
+
+RUN make test
+
+RUN make install 
+
+
