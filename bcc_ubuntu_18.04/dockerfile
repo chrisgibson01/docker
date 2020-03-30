@@ -19,6 +19,18 @@ WORKDIR src/python/
 RUN make
 RUN make install
 
+RUN apt-get install -y g++ libfl-dev systemtap-sdt-dev llvm-7-dev llvm-7-runtime \
+    libclang-7-dev clang-7 
 
-WORKDIR /usr/share/bcc
+ENV HOME=/root
+WORKDIR $HOME
+RUN git clone https://github.com/iovisor/bpftrace
+RUN mkdir bpftrace/build
+WORKDIR bpftrace/build
+RUN cmake -DCMAKE_BUILD_TYPE=Release ..
+RUN make
+RUN make install
+
+
+
 
