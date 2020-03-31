@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t bcc_ubuntu:18.04 .
+docker build -t bpf_ubuntu:18.04 .
