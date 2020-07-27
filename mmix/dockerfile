@@ -1,0 +1,14 @@
+WORKDIR /root/
+
+RUN mkdir mmix
+WORKDIR mmix
+
+RUN wget http://mmix.cs.hm.edu/bin/mmix
+RUN chmod +x mmix
+
+RUN wget http://mmix.cs.hm.edu/bin/mmixal
+RUN chmod +x mmixal
+
+
+
+
