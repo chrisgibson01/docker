@@ -1,0 +1,29 @@
+RUN apt install --yes \
+    build-essential \
+    autotools-dev \
+    automake \
+    cscope 
+
+ENV TZ=Europe/London
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt install -y pkg-config
+    
+RUN apt install -y \
+    bsdmainutils \
+    libdb-dev \
+    libdb++-dev \
+    libboost-all-dev \
+    libcrypto++6 \
+    libevent-dev \
+    libminiupnpc-dev \
+    libssl-dev \
+    libtool \
+    libzmq3-dev 
+
+#    curl \
+#    unzip \
+
+#RUN apt-get update 
+#RUN apt-get install --yes \
+
+
