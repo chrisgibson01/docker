@@ -1,8 +1,10 @@
+RUN apt update
 RUN apt install --yes \
     git \
     tmux \
     vim \
-    wget
+    wget \
+    curl
 
 RUN git clone https://github.com/chrisgibson01/git.git /root/git.git
 RUN ln -s /root/git.git/.gitconfig /root/.gitconfig
