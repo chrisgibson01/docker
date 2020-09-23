@@ -6,14 +6,3 @@ RUN apt install --yes \
     wget \
     curl
 
-RUN git clone https://github.com/chrisgibson01/git.git /root/git.git
-RUN ln -s /root/git.git/.gitconfig /root/.gitconfig
-RUN ln -s /root/git.git/.gitignore /root/.gitignore
-
-RUN git clone https://github.com/chrisgibson01/tmux.git /root/tmux.git
-RUN ln -s /root/tmux.git/.tmux.conf /root/.tmux.conf
-
-RUN git clone https://github.com/chrisgibson01/vim.git /root/vim.git
-RUN ln -s /root/vim.git/.vimrc /root/.vimrc
-
-
