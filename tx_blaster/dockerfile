@@ -1,4 +1,4 @@
-FROM dev_ubuntu:18.04
+FROM bsv_dev_ubuntu:18.04
 
 RUN apt update && apt install -y \
     curl \
@@ -6,10 +6,15 @@ RUN apt update && apt install -y \
     libcrypto++6 \
     libboost-all-dev 
 
+WORKDIR /root
+
 RUN curl https://rea.crea.si/download/nchain/gateway/TxBlaster6_2.zip -O
 
-RUN unzip /TxBlaster6_2.zip
+RUN unzip /root/TxBlaster6_2.zip
 
-RUN chmod +x /TxBlaster6/bin/ubuntu18/TxBlaster
+RUN find / -iname txblaster
 
+RUN chmod +x /root/TxBlaster6/bin/ubuntu18/TxBlaster
+
+EXPOSE 8332 18332 18444
 

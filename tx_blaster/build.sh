@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t txblaster .
+docker build -t tx_blaster:18.04 .
