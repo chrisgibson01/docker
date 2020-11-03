@@ -18,3 +18,18 @@ RUN chmod +x /root/TxBlaster6/bin/ubuntu18/TxBlaster
 
 EXPOSE 8332 18332 18444
 
+RUN echo "regtest=1" >> /root/.bitcoin/bitcoin.conf
+RUN echo "datadir=/root/.bitcoin" >> /root/.bitcoin/bitcoin.conf
+
+RUN echo "port=11150" >> /root/.bitcoin/bitcoin.conf
+RUN echo "rpcport=11151" >> /root/.bitcoin/bitcoin.conf
+RUN echo "rpcuser=user" >> /root/.bitcoin/bitcoin.conf
+RUN echo "rpcpassword=password" >> /root/.bitcoin/bitcoin.conf
+RUN echo "daemon=1" >> /root/.bitcoin/bitcoin.conf
+RUN echo "discover=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "listenonion=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "usecashaddr=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "debug=1" >> /root/.bitcoin/bitcoin.conf
+RUN echo "debugexclude=libevent" >> /root/.bitcoin/bitcoin.conf
+RUN echo "debugexclude=leveldb" >> /root/.bitcoin/bitcoin.conf
+
