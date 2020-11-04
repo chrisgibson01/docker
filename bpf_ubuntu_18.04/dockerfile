@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.05
 MAINTAINER Chris Gibson
 
 RUN apt-get update && apt-get install --yes 
