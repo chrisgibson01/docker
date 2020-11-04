@@ -1,0 +1,5 @@
+RUN mkdir /root/.bitcoin
+RUN echo "excessiveblocksize=0" >> /root/.bitcoin/bitcoin.conf
+RUN echo "maxstackmemoryusageconsensus=0" >> /root/.bitcoin/bitcoin.conf
+
+RUN echo "regtest=1" >> /root/.bitcoin/bitcoin.conf

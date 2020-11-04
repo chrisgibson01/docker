@@ -1,0 +1,13 @@
+RUN mkdir /root/.bitcoin
+WORKDIR /root/.bitcoin
+COPY cargo/bitcoin.conf .
+
+RUN apt-get update -y && apt-get install -y iproute2
+
+WORKDIR /root/
+COPY cargo/create_generate_json.sh .
+
+EXPOSE 8332 18332 18444 11150 11151
+
+
+
