@@ -1,10 +1,10 @@
 docker run --volumes-from vc_sv \
-           --name bitcoind \
+           --name bsv_node \
            --privileged \
             --cap-add=SYS_ADMIN \
             --volume /lib/modules:/lib/modules:ro \
            -it \
            --rm \
-           --net bridge \
+           --net bsv_bridge \
            bsv_dev_ubuntu:20.04 /bin/bash
 
