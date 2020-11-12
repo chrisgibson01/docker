@@ -5,7 +5,5 @@ COPY cargo/bitcoin-cli.conf .
 
 RUN apt-get update -y && apt-get install -y iproute2
 
-WORKDIR /root/
-COPY cargo/create_generate_json.sh .
 
 
