@@ -8,7 +8,5 @@ docker run --volumes-from vc_sv \
            -it \
            --rm \
            --net bsv_bridge \
-           bsv_dev_ubuntu:20.04 \
-           $*
-#           /bin/bash
+           bsv_dev_ubuntu:20.04 
 
