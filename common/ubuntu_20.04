@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
+RUN apt-get update -y
+
 RUN echo "set -o vi" >> /root/.bashrc
 RUN echo "source .bashrc" >> /root/.bash_profile
 
-RUN apt update 

@@ -1,3 +1,12 @@
+FROM ubuntu:20.04
+
+RUN apt-get update -y
+
+RUN echo "set -o vi" >> /root/.bashrc
+RUN echo "source .bashrc" >> /root/.bash_profile
+
+ENV TZ=Europe/London
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 #RUN apt upgrade -y && apt install bpftrace -y
 
 RUN apt-get upgrade -y && apt-get install libbpfcc-dev -y
@@ -27,4 +36,6 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release /root/bpftrace/
 #RUN cmake -DCMAKE_BUILD_TYPE=Release ..
 RUN make -j8
 RUN make install
+
+
 

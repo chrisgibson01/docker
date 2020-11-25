@@ -1,7 +1,11 @@
 #!/bin/bash
 
 cat ../common/ubuntu_20.04 \
+    ../common/timezone \
     ../common/bpftrace \
+    dockerfile_ip \
     > dockerfile
 
-docker build -t bpf_ubuntu:20.04 .
+
+#    ../common/bcc \
+
