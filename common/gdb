@@ -1,0 +1,7 @@
+RUN apt-get update
+RUN apt-get install --yes \
+    gdb \
+    subversion
+
+RUN svn checkout svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python /root/gdb_printers/python
+
