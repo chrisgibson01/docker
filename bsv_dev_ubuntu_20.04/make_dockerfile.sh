@@ -9,6 +9,7 @@ cat ../common/ubuntu_20.04 \
     ../common/bpftrace \
     ../common/perf \
     ../common/gdb \
+    ../common/net_tools \
     dockerfile_ip \
     > dockerfile
 

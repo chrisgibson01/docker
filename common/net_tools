@@ -1,0 +1,9 @@
+RUN apt update --yes && \
+    apt install --yes \
+    iproute2 \
+    iputils-ping \
+    dnsutils \
+    nmap \
+    ngrep
+    #tshark
+
