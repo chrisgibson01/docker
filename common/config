@@ -1,22 +1,24 @@
-RUN git clone https://github.com/chrisgibson01/git.git /root/git.git
-RUN ln -s /root/git.git/.gitconfig /root/.gitconfig
-RUN ln -s /root/git.git/.gitignore /root/.gitignore
+WORKDIR /root
 
-RUN git clone https://github.com/chrisgibson01/vim.git /root/vim.git
-RUN ln -s /root/vim.git/.vimrc /root/.vimrc
-RUN ln -s /root/vim.git/.viminfo /root/.viminfo
+RUN git clone https://github.com/chrisgibson01/git.git
+RUN ln -s git/.gitconfig
+RUN ln -s git/.gitignore
 
-RUN git clone https://github.com/chrisgibson01/tmux.git /root/tmux.git
-RUN ln -s /root/tmux.git/.tmux.conf /root/.tmux.conf
+RUN git clone https://github.com/chrisgibson01/vim.git
+RUN ln -s vim/.vimrc
+RUN ln -s vim/.viminfo
 
-RUN git clone https://github.com/chrisgibson01/clang-format.git /root/clang-format.git
-RUN ln -s /root/clang-format.git/.clang-format /root/.clang-format
+RUN git clone https://github.com/chrisgibson01/tmux.git
+RUN ln -s tmux/.tmux.conf
 
-RUN git clone https://github.com/chrisgibson01/clang-tidy.git /root/clang-tidy.git
-RUN ln -s /root/clang-tidy.git/.clang-tidy /root/.clang-tidy
+RUN git clone https://github.com/chrisgibson01/clang-format.git
+RUN ln -s clang-format/.clang-format
 
-RUN git clone https://github.com/chrisgibson01/gdb.git /root/gdb.git
-RUN ln -s /root/gdb.git/.gdbinit /root/.gdbinit
+RUN git clone https://github.com/chrisgibson01/clang-tidy.git
+RUN ln -s clang-tidy/.clang-tidy
 
-RUN git clone https://github.com/chrisgibson01/wireshark.git /root/wireshark.git
+RUN git clone https://github.com/chrisgibson01/gdb.git
+RUN ln -s gdb/.gdbinit
 
+RUN git clone https://github.com/chrisgibson01/wireshark.git
+RUN ln -s wireshark/bsv.lua 
