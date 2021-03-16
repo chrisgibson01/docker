@@ -6,7 +6,6 @@ RUN ln -s git/.gitignore
 
 RUN git clone https://github.com/chrisgibson01/vim.git
 RUN ln -s vim/.vimrc
-RUN ln -s vim/.viminfo
 
 RUN git clone https://github.com/chrisgibson01/tmux.git
 RUN ln -s tmux/.tmux.conf

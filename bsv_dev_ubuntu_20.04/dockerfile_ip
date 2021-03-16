@@ -3,5 +3,6 @@ WORKDIR /root/.bitcoin
 COPY cargo/bitcoin.conf .
 COPY cargo/bitcoin-cli.conf .
 
+WORKDIR /root/sv
 
 
