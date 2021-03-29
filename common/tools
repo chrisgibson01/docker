@@ -1,8 +1,6 @@
-RUN apt update
-RUN apt install --yes \
+RUN apt update && apt install --yes \
     git \
     tmux \
-    vim \
     wget \
     curl
 

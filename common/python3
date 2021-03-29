@@ -1,0 +1,5 @@
+RUN apt update && apt install --yes \
+    python3-pip
+
+RUN pip3 install pyflakes
+
